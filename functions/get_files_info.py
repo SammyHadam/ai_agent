@@ -16,7 +16,8 @@ def get_files_info(working_directory, directory="."):
             full = os.path.join(abs_target, name)
             size = os.path.getsize(full)
             is_dir = os.path.isdir(full)
-        lines.append(f"- {name}: file_size={size} bytes, is_dir={is_dir}")
+            lines.append(f"- {name}: file_size={size} bytes, is_dir={is_dir}")
         return "\n".join(lines)
     except Exception as e:
        return f"Error: {e}"
+    
